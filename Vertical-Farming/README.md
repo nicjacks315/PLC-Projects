@@ -34,6 +34,8 @@ A lack of serial pins on the UNO R3 means that functionality needs to be mimicke
 - `NewSoftSerial` http://arduiniana.org/libraries/newsoftserial/
   - Not a lot of testing went into this one.
 
+Note that all serial monitoring should use CR & LF. These characters are automatically stripped prior to forwarding to the BLE radio.
+
 ## Bluetooth Radio
 DSD Tech HM-10 presoldered on breakout board. http://www.dsdtech-global.com/2017/08/hm-10.html
 
