@@ -47,8 +47,12 @@ Implementation in this project serves as simple serial monitor forwarding. HM-10
 
 There's a dozen pins on the HM-10 that can *almost* be used as a replacement for something like the Arduino. We can actually write custom values and functions, I believe, to the HM-10 and directly wire our relays to those pins. The breakout board on this DSD-Tech model however, hides those pins.
 
-## Circuit Diagram
-- to-do
+## Circuit Diagrams
+### UNO R3 Pinning - Out of date!
+![1](https://user-images.githubusercontent.com/80596121/111043089-8d8d3580-83f5-11eb-9b2e-712eb2f71693.png)
+
+### Backup Power Supply
+![2](https://user-images.githubusercontent.com/80596121/111043093-90882600-83f5-11eb-9585-f6b5740079a1.jpg)
 
 ## Commands
 
