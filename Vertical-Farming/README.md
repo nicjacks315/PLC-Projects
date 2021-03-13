@@ -80,6 +80,8 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 ### SR-Latches
 `Class Latch`
 - A soft implementation of an S-R latch. Basically we take an `e`% error within some control system setpoint value.
+- `e` is not to be confused with signal-setpoint error as shown in block diagrams
+![Set-point_control](https://user-images.githubusercontent.com/80596121/111044011-d693b880-83fa-11eb-99c5-b2101b8ed639.png)
 - `X` is the control variable value, for instance, humidity. This value is updated by a `Sensor` class at the defined polling rate.
 - `S` or `Set` is defined as `X ≤ setpoint*(1-e)`
 - `R` or `Reset` is defined as `X ≥ setpoint*(1-e)`
