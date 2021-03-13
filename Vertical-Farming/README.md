@@ -77,9 +77,10 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 ### Sensors
 `Class Sensor`
 - to-do
-### RS-Latches
+### SR-Latches
 `Class Latch`
 - to-do
+![maxresdefault](https://user-images.githubusercontent.com/80596121/111043660-887db580-83f8-11eb-82ef-dfe0294e295e.jpg)
 ### Metrics
 `Class Metric`
 - to-do
