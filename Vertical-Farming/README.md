@@ -20,3 +20,19 @@
 | `vars` | List the IDs of all changeable cvars | `vars` |
 | `get` | Get the value of a cvar | `get <cvar ID>` |
 | `set` | Set the value of a cvar | `set <cvar ID> <float>` |
+
+### Components
+#### Sensors
+`Class Sensor`
+#### RS-Latches
+`Class Latch`
+#### Metrics
+`Class Metric`
+#### Scheduled Tasks
+`Class ScheduledTask`
+
+### Sensor Types
+#### Digital
+#### Analog
+#### Serial
+#### PWM
