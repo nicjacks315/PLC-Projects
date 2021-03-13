@@ -84,9 +84,10 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 `struct Latch`
 #### To Do
 - Enable, disable latches. Need to be able to shut off pumps without powering down the system. Should also resume it's original state after being re-enabled.
-- No default constructor, just fill in the blanks during declaration and you're good to go.
+- Make default constructor private and friend it to the `LatchManager` singleton.
 #### Description
 - A soft implementation of an S-R latch. Basically we take an `e`% error within some control system setpoint value, test our sensor output against this threshold, and open or close a relay to power on an effector and drive the sensor signal in the direction of our desired setpoint.
+- Do not use the default constructor. Fill in the blanks during declaration and you're good to go.
 #### Behavior
 - `e` may be changed at runtime to allow manual and automatic calibration in response to changing environemntal factors such as seasonal snow etc. This value is not to be confused with signal-setpoint error as shown in block diagrams.
 - `X` is the control variable value, for instance, humidity. This value is updated by a `Sensor` class at the defined polling rate.
