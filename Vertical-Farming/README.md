@@ -20,12 +20,15 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 ### Control Systems
 | System | Description |
 | --- | --- |
-| Humidity | |
-| Air Temperature | |
-| Water Temperature | |
-| Water Acidity | |
-| Total Dissolved Solids | |
-| Daylight | |
+| Absolute Humidity | % |
+| Air Temperature | °C |
+| Water Temperature | °C |
+| Water Acidity | pH |
+| Water Total Dissolved Solids | ppm |
+| Water Flow Rate | Lpm |
+| Water Level | boolean |
+| Daylight | s |
+
 
 
 ### Serialization
