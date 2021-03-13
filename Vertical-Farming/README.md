@@ -95,10 +95,11 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 - `R` or `Reset` is defined as `X ≥ setpoint*(1+e)`. This represents the other half of our feedback calculation.
 - `Q̅` is a byte almost exclusively defined as `1` or `HIGH` and represents a constant DC signal to some 5V relay. Equipment drawing current from this relay serves as our effector and needs to be calibrated so as to yield results in a short enough time frame without destabilizing the system. For example, the intensity of a water heater is represented as the water temperature regulator's gain value. 
 - `Q` is a byte almost exclusively defined as `0` or `LOW` and also represents a constant DC signal to some 5V relay. Equipment drawing current from this relay is effectively shut down in this state.
-#### Notes
 - In this specific implementation, it is impossible for both `R` and `S` to be `true`.
-![maxresdefault](https://user-images.githubusercontent.com/80596121/111043682-a2b79380-83f8-11eb-90d0-d859a94d069a.jpg)
 - Ultimately we should get a relatively stable control system that hovers around our desired setpoints
+
+![maxresdefault](https://user-images.githubusercontent.com/80596121/111043682-a2b79380-83f8-11eb-90d0-d859a94d069a.jpg)
+
 ### Metrics
 `class Metric`
 - to-do
