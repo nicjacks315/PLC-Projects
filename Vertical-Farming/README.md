@@ -1,7 +1,9 @@
 # MAASyOS
-### Modular Automated Aquaponics System Operating System
-### SFSU Spring 2021 Senior Design Project
-### Nicholas Jackson
+Modular Automated Aquaponics System Operating System
+Nicholas Jackson
+SFSU Spring 2021 Senior Design Project
+
+## Features
 
 ### Control Systems
 
