@@ -26,6 +26,7 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 ### Bluetooth Radio
 DSD Tech HM-10 presoldered on breakout board.
 Extensive testing on HM-10s, clones, and counterfeits performed by Martyn Currey at http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/.
+Implementation in this project serves as simple serial monitor forwarding. HM-10 AT commands issued via USB will disconnect any bluetooth LE devices allow configuration of the radio. Otherwise, commands issued via BLE serial terminal will simply forward to the Arduino `Serial` stream and similarly, anything printed OR written to the `Serial` stream will be forward to the radio and printed on the remote BLE terminal. Note `BLE` is not the same as `Bluetooth whatever.0`.
 
 ### Circuit Diagram
 - to-do
