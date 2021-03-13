@@ -83,8 +83,8 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 - `X` is the control variable value, for instance, humidity. This value is updated by a `Sensor` class at the defined polling rate.
 - `S` or `Set` is defined as `X ≤ setpoint*(1-e)`
 - `R` or `Reset` is defined as `X ≥ setpoint*(1-e)`
-- `Q-high` is a byte almost exclusively defined as `1` or `HIGH` and represents a constant DC signal to some 5V relay.
-- `Q-low` is a byte almost exclusively defined as `0` or `LOW` and also represents a constant DC signal to some 5V relay.
+- `Q̅` is a byte almost exclusively defined as `1` or `HIGH` and represents a constant DC signal to some 5V relay.
+- `Q` is a byte almost exclusively defined as `0` or `LOW` and also represents a constant DC signal to some 5V relay.
 ![maxresdefault](https://user-images.githubusercontent.com/80596121/111043682-a2b79380-83f8-11eb-90d0-d859a94d069a.jpg)
 ### Metrics
 `Class Metric`
