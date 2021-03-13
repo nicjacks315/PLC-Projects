@@ -34,7 +34,10 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 
 
 ### Serialization
-- to-do
+A lack of serial pins on the UNO R3 means that functionality needs to be mimicke with software. The following libraries are used interchangably through different versions, but ultimately `SoftwareSerial` was chosen.
+- `SoftwareSerial` https://www.arduino.cc/en/Reference/softwareSerial
+- `AltSoftSerial` https://www.pjrc.com/teensy/td_libs_AltSoftSerial.html
+- `NewSoftSerial` http://arduiniana.org/libraries/newsoftserial/
 
 ### Bluetooth Radio
 DSD Tech HM-10 presoldered on breakout board.
