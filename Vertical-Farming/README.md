@@ -1,4 +1,22 @@
-# MAASy
-### Modular Automated Aquaponics System
+# MAASyOS
+### Modular Automated Aquaponics System Operating System
 ### SFSU Spring 2021 Senior Design Project
 ### Nicholas Jackson
+
+### Control Systems
+
+### Serialization
+
+### Bluetooth Radio
+
+### Circuit Diagram
+
+### Commands
+
+| Command | Description | Syntax |
+| :--- | --- | --- |
+| `info` | Print a table of all sensor readings and relay states | `info` |
+| `time` | Set the internal clock, defaults to compile time on each boot. Use 24-hour time to distinguish AM-PM. | `time <hour> <minute>` |
+| `vars` | List the IDs of all changeable cvars | `vars` |
+| `get` | Get the value of a cvar | `get <cvar ID>` |
+| `set` | Set the value of a cvar | `set <cvar ID> <float>` |
