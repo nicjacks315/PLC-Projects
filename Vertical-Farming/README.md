@@ -57,7 +57,7 @@ Implementation in this project serves as simple serial monitor forwarding. HM-10
 | `get` | Get the value of a cvar | `get <cvar ID>` |
 | `set` | Set the value of a cvar | `set <cvar ID> <float>` |
 
-### Components
+### Classes
 #### Sensors
 `Class Sensor`
 - to-do
