@@ -1,7 +1,7 @@
 # MAASyOS
 Modular Automated Aquaponics System Operating System
 
-Nicholas Jackson
+Nicholas Jackson, EIT
 
 SFSU Department of Mechanical Engineering, Spring 2021
 
