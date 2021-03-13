@@ -1,11 +1,6 @@
 # MAASyOS
 Modular Automated Aquaponics System Operating System
-
-Nicholas Jackson
-
-SFSU Spring 2021
-
-Mechanical Engineering Senior Design Project
+SFSU Department of Mechanical Engineering, Spring 2021
 
 ## Description
 https://www.theaquaponicsource.com/what-is-aquaponics/
