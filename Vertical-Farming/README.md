@@ -17,6 +17,7 @@ SFSU Spring 2021 Senior Design Project
 ### Serialization
 
 ### Bluetooth Radio
+DSD Tech Hm-10 presoldered on breakout board.
 
 ### Circuit Diagram
 
