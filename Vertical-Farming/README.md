@@ -3,7 +3,12 @@ Modular Automated Aquaponics System Operating System
 
 Nicholas Jackson
 
-SFSU Spring 2021 Senior Design Project
+SFSU Spring 2021
+
+Mechanical Engineering Senior Design Project
+
+## Description
+Manages a set of sensors and controls a series of 5V solid state relays which power high current devices such as air conditioners, fans, pumps, lighting systems, etc. Arduino UNO R3 is likely a less-than-optimal choice for this project due to limited dynamic memory, limited processing power, large form factor, and 8-10 bit A2D converter. A preferrabble alternative would be something like the 32-bit Teensy 3.2, but we work with what we have. https://www.pjrc.com/teensy/
 
 ## High Level
 - Implementations are defined in `aquaponics.hpp`
