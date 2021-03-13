@@ -82,15 +82,19 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 - to-do
 ### SR-Latches
 `struct Latch`
-- TO-DO: Enable, disable latches. Need to be able to shut off pumps without powering down the system. Should also resume it's original state after being re-enabled.
+#### To Do
+- Enable, disable latches. Need to be able to shut off pumps without powering down the system. Should also resume it's original state after being re-enabled.
 - No default constructor, just fill in the blanks during declaration and you're good to go.
+#### Description
 - A soft implementation of an S-R latch. Basically we take an `e`% error within some control system setpoint value, test our sensor output against this threshold, and open or close a relay to power on an effector and drive the sensor signal in the direction of our desired setpoint.
+#### Behavior
 - `e` may be changed at runtime to allow manual and automatic calibration in response to changing environemntal factors such as seasonal snow etc. This value is not to be confused with signal-setpoint error as shown in block diagrams.
 - `X` is the control variable value, for instance, humidity. This value is updated by a `Sensor` class at the defined polling rate.
 - `S` or `Set` is defined as `X ≤ setpoint*(1-e)`. This represents one half of our feedback calculation.
 - `R` or `Reset` is defined as `X ≥ setpoint*(1+e)`. This represents the other half of our feedback calculation.
 - `Q̅` is a byte almost exclusively defined as `1` or `HIGH` and represents a constant DC signal to some 5V relay. Equipment drawing current from this relay serves as our effector and needs to be calibrated so as to yield results in a short enough time frame without destabilizing the system. For example, the intensity of a water heater is represented as the water temperature regulator's gain value. 
 - `Q` is a byte almost exclusively defined as `0` or `LOW` and also represents a constant DC signal to some 5V relay. Equipment drawing current from this relay is effectively shut down in this state.
+#### Notes
 - In this specific implementation, it is impossible for both `R` and `S` to be `true`.
 ![maxresdefault](https://user-images.githubusercontent.com/80596121/111043682-a2b79380-83f8-11eb-90d0-d859a94d069a.jpg)
 - Ultimately we should get a relatively stable control system that hovers around our desired setpoints
