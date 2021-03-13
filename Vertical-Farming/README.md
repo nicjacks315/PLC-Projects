@@ -89,6 +89,8 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 - `Q` is a byte almost exclusively defined as `0` or `LOW` and also represents a constant DC signal to some 5V relay.
 - In this implementation, it is impossible for both `R` and `S` to be `true`.
 ![maxresdefault](https://user-images.githubusercontent.com/80596121/111043682-a2b79380-83f8-11eb-90d0-d859a94d069a.jpg)
+- Ultimately we should get a relatively stable control system that hovers around our desired setpoints
+![sr](https://user-images.githubusercontent.com/80596121/111044088-528e0080-83fb-11eb-9cca-1fc1122a62ee.png)
 ### Metrics
 `Class Metric`
 - to-do
