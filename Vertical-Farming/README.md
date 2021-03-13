@@ -80,6 +80,7 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 ### Sensors
 `class Sensor`
 - to-do
+---
 ### SR-Latches
 `struct Latch`
 #### To Do
@@ -100,9 +101,11 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 
 ![maxresdefault](https://user-images.githubusercontent.com/80596121/111043682-a2b79380-83f8-11eb-90d0-d859a94d069a.jpg)
 
+---
 ### Metrics
 `class Metric`
 - to-do
+---
 ### Scheduled Tasks
 `struct ScheduledTask`
 - to-do
