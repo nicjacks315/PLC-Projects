@@ -59,7 +59,7 @@ There isn't exactly a long range monitoring solution here, but in the event you'
 ![2](https://user-images.githubusercontent.com/80596121/111043093-90882600-83f5-11eb-9585-f6b5740079a1.jpg)
 
 ## Commands
-
+Commands can be issued from any BLE terminal app. The system is advertised as MAASy and requires a pin to connect. The pin can only be changed via HM-10 AT commands issued through the serial monitor on a USB-A connected computer. Note that AT commands and HM-10 pinning can be found at manufacturer's site, but this Cornell document does a better job of it: https://people.ece.cornell.edu/land/courses/ece4760/PIC32/uart/HM10/DSD%20TECH%20HM-10%20datasheet.pdf. It's also worth referencing Maryn Currey's experiments linked above.
 | Command | Description | Syntax |
 | :--- | --- | --- |
 | `info` | Print a table of all sensor readings and relay states | `info` |
