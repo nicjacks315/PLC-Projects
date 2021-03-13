@@ -1,7 +1,14 @@
 # MAASyOS
 Modular Automated Aquaponics System Operating System
+
 Nicholas Jackson
+
 SFSU Spring 2021 Senior Design Project
+
+## High Level
+- Implementations are declared in `config.hpp`
+- `main.ino` containts Arduino sketch
+- Commands are defined and registered in `commands.hpp`
 
 ## Features
 
