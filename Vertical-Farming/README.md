@@ -17,7 +17,8 @@ SFSU Spring 2021 Senior Design Project
 ### Serialization
 
 ### Bluetooth Radio
-DSD Tech Hm-10 presoldered on breakout board.
+DSD Tech HM-10 presoldered on breakout board.
+Extensive testing on HM-10s, clones, and counterfeits performed by Martyn Currey at http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/.
 
 ### Circuit Diagram
 
