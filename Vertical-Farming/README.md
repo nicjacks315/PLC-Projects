@@ -29,8 +29,8 @@ Setpoints are defined in `config.hpp` and are dependent on fish and crop species
 | Water Acidity | pH | pH Probe | pH Dosing Mechanism |
 | Water Total Dissolved Solids | ppm | TDS Probe | Human Operator |
 | Water Flow Rate | Lpm | 1/2" Φ Flowmeter | Water Pump |
-| Water Level | boolean | Infrared Water Contact Sensor | Water Pump |
-| Daylight | s | Onboard Timer | Human Operator |
+| Water Level | Boolean | Infrared Water Contact Sensor | Water Pump |
+| Daylight | Elapsed Time | Onboard Timer | Human Operator |
 
 ## Serialization
 A lack of supplementary serial pins (TX/RX pins are pulled up directly from the USB-A port) on the UNO R3 means that functionality needs to be mimicked with software on digital pins that support interrupts. The following libraries are used interchangably through different versions, but ultimately `SoftwareSerial` was chosen.
