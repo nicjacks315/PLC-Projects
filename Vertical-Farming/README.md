@@ -18,7 +18,7 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 ## Control Systems
 | System | Units |
 | --- | --- |
-| Absolute Humidity | % |
+| Relative Humidity | % |
 | Air Temperature | °C |
 | Water Temperature | °C |
 | Water Acidity | pH |
