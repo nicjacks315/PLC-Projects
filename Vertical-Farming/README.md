@@ -19,16 +19,16 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 
 ## Control Systems
 ![Set-point_control](https://user-images.githubusercontent.com/80596121/111044026-f0cd9680-83fa-11eb-96c2-f8cf8ae445cd.png)
-| System | Units | Method |
+| System | Units | Measuring Element |
 | --- | --- | --- |
-| Relative Humidity | % | SR Latch, Setpoint Control |
-| Air Temperature | °C | SR Latch, Setpoint Control |
-| Water Temperature | °C | SR Latch, Setpoint Control |
-| Water Acidity | pH | SR Latch, Setpoint Control |
-| Water Total Dissolved Solids | ppm | Trigger |
-| Water Flow Rate | Lpm | Trigger |
-| Water Level | boolean | Trigger |
-| Daylight | s | Timed Task |
+| Relative Humidity | % | DHT22 |
+| Air Temperature | °C | DHT22 |
+| Water Temperature | °C | pH Probe |
+| Water Acidity | pH | pH Probe |
+| Water Total Dissolved Solids | ppm | TDS Probe |
+| Water Flow Rate | Lpm | 1/2" Φ Flowmeter |
+| Water Level | boolean | Infrared Water Contact Sensor |
+| Daylight | s | Onboard Timer |
 
 ## Serialization
 A lack of supplementary serial pins (TX/RX pins are pulled up directly from the USB-A port) on the UNO R3 means that functionality needs to be mimicked with software on digital pins that support interrupts. The following libraries are used interchangably through different versions, but ultimately `SoftwareSerial` was chosen.
