@@ -18,6 +18,7 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 - Runtime commands are defined and registered in `commands.hpp`
 
 ## Control Systems
+![Set-point_control](https://user-images.githubusercontent.com/80596121/111044026-f0cd9680-83fa-11eb-96c2-f8cf8ae445cd.png)
 | System | Units | Method |
 | --- | --- | --- |
 | Relative Humidity | % | SR Latch, Setpoint Control |
@@ -80,8 +81,7 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 ### SR-Latches
 `Class Latch`
 - A soft implementation of an S-R latch. Basically we take an `e`% error within some control system setpoint value.
-- `e` may be changed at runtime to allow manual and automatic calibration in response to changing environemntal factors such as seasonal snow etc. This value is not to be confused with signal-setpoint error as shown in block diagrams:
-![Set-point_control](https://user-images.githubusercontent.com/80596121/111044026-f0cd9680-83fa-11eb-96c2-f8cf8ae445cd.png)
+- `e` may be changed at runtime to allow manual and automatic calibration in response to changing environemntal factors such as seasonal snow etc. This value is not to be confused with signal-setpoint error as shown in block diagrams.
 - `X` is the control variable value, for instance, humidity. This value is updated by a `Sensor` class at the defined polling rate.
 - `S` or `Set` is defined as `X ≤ setpoint*(1-e)`. This represents one half of our feedback calculation.
 - `R` or `Reset` is defined as `X ≥ setpoint*(1+e)`. This represents the other half of our feedback calculation.
