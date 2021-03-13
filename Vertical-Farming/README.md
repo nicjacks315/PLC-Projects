@@ -19,6 +19,7 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 
 ## Control Systems
 Setpoints are defined in `config.hpp` and are dependent on fish and crop species population ratios. These may all be adjusted via commands documented below.
+
 ![Set-point_control](https://user-images.githubusercontent.com/80596121/111044026-f0cd9680-83fa-11eb-96c2-f8cf8ae445cd.png)
 | System | Units | Measuring Element | Effector |
 | --- | --- | --- | --- |
