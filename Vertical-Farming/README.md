@@ -18,14 +18,17 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 ## Features
 
 ### Control Systems
+- to-do
 
 ### Serialization
+- to-do
 
 ### Bluetooth Radio
 DSD Tech HM-10 presoldered on breakout board.
 Extensive testing on HM-10s, clones, and counterfeits performed by Martyn Currey at http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/.
 
 ### Circuit Diagram
+- to-do
 
 ### Commands
 
@@ -40,15 +43,23 @@ Extensive testing on HM-10s, clones, and counterfeits performed by Martyn Currey
 ### Components
 #### Sensors
 `Class Sensor`
+- to-do
 #### RS-Latches
 `Class Latch`
+- to-do
 #### Metrics
 `Class Metric`
+- to-do
 #### Scheduled Tasks
 `Class ScheduledTask`
+- to-do
 
 ### Sensor Types
 #### Digital
+- to-do
 #### Analog
+- to-do
 #### Serial
+- to-do
 #### PWM
+- to-do
