@@ -18,7 +18,7 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 ## Features
 
 ### Control Systems
-| System | Description |
+| System | Units |
 | --- | --- |
 | Absolute Humidity | % |
 | Air Temperature | °C |
