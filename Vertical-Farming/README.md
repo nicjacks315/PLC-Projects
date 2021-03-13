@@ -79,7 +79,7 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 - to-do
 ### SR-Latches
 `Class Latch`
-- A soft implementation of an SR-Latch. Basically we take an `e`% error within some control system setpoint value.
+- A soft implementation of an S-R latch. Basically we take an `e`% error within some control system setpoint value.
 - `X` is the control variable value, for instance, humidity. This value is updated by a `Sensor` class at the defined polling rate.
 - `S` or `Set` is defined as `X ≤ setpoint*(1-e)`
 - `R` or `Reset` is defined as `X ≥ setpoint*(1-e)`
