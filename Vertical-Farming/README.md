@@ -24,7 +24,7 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 | Air Temperature | °C | SR Latch, Setpoint Control |
 | Water Temperature | °C | SR Latch, Setpoint Control |
 | Water Acidity | pH | SR Latch, Setpoint Control |
-| Water Total Dissolved Solids | ppm | SR Latch, Setpoint Control |
+| Water Total Dissolved Solids | ppm | Trigger |
 | Water Flow Rate | Lpm | Trigger |
 | Water Level | boolean | Trigger |
 | Daylight | s | Timed Task |
