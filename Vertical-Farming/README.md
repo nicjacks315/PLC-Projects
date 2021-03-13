@@ -85,6 +85,7 @@ Note that AT commands and HM-10 pinning can be found at manufacturer's site, but
 - `R` or `Reset` is defined as `X ≥ setpoint*(1-e)`
 - `Q̅` is a byte almost exclusively defined as `1` or `HIGH` and represents a constant DC signal to some 5V relay.
 - `Q` is a byte almost exclusively defined as `0` or `LOW` and also represents a constant DC signal to some 5V relay.
+- In this implementation, it is impossible for both `R` and `S` to be `true`.
 ![maxresdefault](https://user-images.githubusercontent.com/80596121/111043682-a2b79380-83f8-11eb-90d0-d859a94d069a.jpg)
 ### Metrics
 `Class Metric`
