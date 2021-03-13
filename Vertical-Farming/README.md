@@ -12,6 +12,8 @@ https://www.theaquaponicsource.com/what-is-aquaponics/
 
 Manages a set of sensors and controls a series of 5V solid state relays which power high current devices such as air conditioners, fans, pumps, lighting systems, etc. Arduino UNO R3 ATMega328p is a less-than-optimal choice for this project due to limited dynamic memory, limited processing power, large form factor, and 8-10 bit A2D converter. A preferrable alternative would be something like the 32-bit Teensy 3.2, but we work with what we have. https://www.pjrc.com/teensy/
 
+There's some glaring issues with the control systems designed here, but it all works, the fish and plants are happy, and that's all that really matters in the end.
+
 ## Code Organization
 - Implementations are defined in `aquaponics.hpp`
 - Instantiations are declared in `config.hpp`
