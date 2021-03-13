@@ -18,16 +18,16 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 - Runtime commands are defined and registered in `commands.hpp`
 
 ## Control Systems
-| System | Units |
-| --- | --- |
-| Relative Humidity | % |
-| Air Temperature | °C |
-| Water Temperature | °C |
-| Water Acidity | pH |
-| Water Total Dissolved Solids | ppm |
-| Water Flow Rate | Lpm |
-| Water Level | boolean |
-| Daylight | s |
+| System | Units | Method |
+| --- | --- | --- |
+| Relative Humidity | % | SR Latch, Setpoint Control |
+| Air Temperature | °C | SR Latch, Setpoint Control |
+| Water Temperature | °C | SR Latch, Setpoint Control |
+| Water Acidity | pH | SR Latch, Setpoint Control |
+| Water Total Dissolved Solids | ppm | SR Latch, Setpoint Control |
+| Water Flow Rate | Lpm | Trigger |
+| Water Level | boolean | Trigger |
+| Daylight | s | Timed Task |
 
 ## Serialization
 A lack of supplementary serial pins (TX/RX pins are pulled up directly from the USB-A port) on the UNO R3 means that functionality needs to be mimicked with software on digital pins that support interrupts. The following libraries are used interchangably through different versions, but ultimately `SoftwareSerial` was chosen.
