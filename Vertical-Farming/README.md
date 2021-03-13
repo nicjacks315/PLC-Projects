@@ -49,7 +49,7 @@ There's a dozen pins on the HM-10 that can *almost* be used as a replacement for
 
 ## Circuit Diagrams
 ### UNO R3 Pinning
-This diagram is more-or-less accurate, but the pinning changed with serial communication requirements and pin interrupt availability. The only phsyical components missing here are a set of parllel resistors forming a voltage divider (1kΩ-2kΩ) on the Rx pin of the HM-10 BLE radio. The purpose of said voltage divider is to step down the amplitude of serial communication from the Arduino from 5V to 3.3V.
+This diagram is more-or-less accurate, but the pinning changed with serial communication requirements and pin interrupt availability. The only physical components missing here are a set of parllel resistors forming a voltage divider (1kΩ-2kΩ) on the Rx pin of the HM-10 BLE radio. The purpose of said voltage divider is to step down the amplitude of serial communication from the Arduino from 5V to 3.3V. It's also worth noting here that pins Tx and Rx pins should be crossed - so the Arduino transmits to the radio's Rx pin, and the radio transmits to the Arduino's Rx pin. There seems to be a lot of confusion about this on the internet, but what I've written here is absolutely correct.
 
 ![1](https://user-images.githubusercontent.com/80596121/111043089-8d8d3580-83f5-11eb-9b2e-712eb2f71693.png)
 
