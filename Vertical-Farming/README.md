@@ -26,7 +26,7 @@ Manages a set of sensors and controls a series of 5V solid state relays which po
 | Daylight | s |
 
 ## Serialization
-A lack of supplementary serial pins (TX/RX pins are pulled up directly from the USB-A port) on the UNO R3 means that functionality needs to be mimicked with software an digital pins that support interrupts. The following libraries are used interchangably through different versions, but ultimately `SoftwareSerial` was chosen.
+A lack of supplementary serial pins (TX/RX pins are pulled up directly from the USB-A port) on the UNO R3 means that functionality needs to be mimicked with software on digital pins that support interrupts. The following libraries are used interchangably through different versions, but ultimately `SoftwareSerial` was chosen.
 - `SoftwareSerial` https://www.arduino.cc/en/Reference/softwareSerial
   - Interrupt heavy, but reliable. Causes issues with timing if used too much.
 - `AltSoftSerial` https://www.pjrc.com/teensy/td_libs_AltSoftSerial.html
