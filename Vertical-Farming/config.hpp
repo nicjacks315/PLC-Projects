@@ -9,7 +9,7 @@
 #define PIN_IN_FLO    2     //flowmeter pwm pin
 #define PIN_IN_WLS    3     //infrared water level data
 #define PIN_IN_DHT    4     //dht22 data (air temp/humidity)
-#define PIN_IN_TDS    5     //dissolved solids analog
+#define PIN_OUT_ACU   5    //AC unit relay
 
 #define PIN_IN_BLE    6     //bluetooth serial rx
 #define PIN_OUT_BLE   7     //bluetooth serial tx
@@ -17,7 +17,7 @@
 #define PIN_IN_ACD    8     //pH sensor
 #define PIN_IN_ACD    9     //water temperature
 
-#define PIN_OUT_ACU   A0    //AC unit relay
+#define PIN_IN_TDS    A0     //dissolved solids analog
 #define PIN_OUT_FAN   A1    //fan relay
 #define PIN_OUT_LIT   A2    //light relay
 #define PIN_OUT_PMP   A3    //water pump relay
