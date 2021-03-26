@@ -8,19 +8,24 @@
 
 #define PIN_IN_FLO    2     //flowmeter pwm pin
 #define PIN_IN_WLS    3     //infrared water level data
-#define PIN_IN_DHT    4     //dht22 data
-
-#define PIN_IN_BTN    5     //debounced button
-//#define PIN_IN_ACD    5     //pH sensor analog
-//#define PIN_IN_TDS    6     //dissolved solids analog
+#define PIN_IN_DHT    4     //dht22 data (air temp/humidity)
+#define PIN_IN_TDS    5     //dissolved solids analog
 
 #define PIN_IN_BLE    6     //bluetooth serial rx
 #define PIN_OUT_BLE   7     //bluetooth serial tx
 
-#define PIN_OUT_PMP   A5    //water pump relay
-#define PIN_OUT_FAN   A4    //fan relay
-#define PIN_OUT_ACU   A3    //AC unit relay
+#define PIN_IN_ACD    8     //pH sensor
+#define PIN_IN_ACD    9     //water temperature
+
+#define PIN_OUT_ACU   A0    //AC unit relay
+#define PIN_OUT_FAN   A1    //fan relay
 #define PIN_OUT_LIT   A2    //light relay
+#define PIN_OUT_PMP   A3    //water pump relay
+#define PIN_OUT_WHT   A4    //water heater relay
+#define PIN_OUT_VLV   A5    //solenoid valve
+
+#define PIN_OUT_PHU   12    //pH motor up
+#define PIN_OUT_PHD   13    //pH motor down
 
 //-------------------------------------------------------------------------------------------------------------------------------------
 //instantiate framework singletons
@@ -31,7 +36,7 @@ static SerialManager    serial(&console, PIN_IN_BLE, PIN_OUT_BLE);
 static VariableManager  variables;
 static SensorManager    sensors;
 static LatchManager     latches;
-//static Display          display;
+//static Display        display;
 
 //-------------------------------------------------------------------------------------------------------------------------------------
 //declare control variables (all should be float)
