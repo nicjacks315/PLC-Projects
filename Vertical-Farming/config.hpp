@@ -15,7 +15,7 @@
 #define PIN_OUT_BLE   7     //bluetooth serial tx
 
 #define PIN_IN_ACD    8     //pH sensor
-#define PIN_IN_ACD    9     //water temperature
+#define PIN_IN_WTP    9     //water temperature
 
 #define PIN_IN_TDS    A0     //dissolved solids analog
 #define PIN_OUT_FAN   A1    //fan relay
