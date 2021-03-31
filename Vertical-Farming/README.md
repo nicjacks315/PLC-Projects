@@ -5,6 +5,11 @@ Nicholas Jackson, EIT
 
 SFSU College of Engineering, Spring 2021
 
+Senior Capstone Project in collaboration with
+- John Calhoun
+- Daniel Navarro
+- Ronal Effendy
+
 ![serial-ble-terminal](https://user-images.githubusercontent.com/80596121/111042939-992c2c80-83f4-11eb-8c24-d73a0afcbe69.jpg)
 
 ## Description
