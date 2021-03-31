@@ -57,6 +57,12 @@ static float humidityLow = 55.f;
 static float humidityHigh = 65.f;
 static float airTempLow = 24.f;
 static float airTempHigh = 27.f;
+static float airTempLow = 24.f;
+
+static float waterAcidityLow = 6.5f;
+static float waterAcidityHigh = 8.5f;
+static float waterTempLow = 21.f;
+static float waterTempHigh = 24.f;
 
 //-------------------------------------------------------------------------------------------------------------------------------------
 
@@ -69,6 +75,10 @@ static void configure() {
   variables.addCvar(                  &humidityHigh,      "HUM_FAN_ON",      " [0-100] humidity, ≥x fan turns on"         );
   variables.addCvar(                  &airTempLow,        "TMP_ACU_OFF",      "[0-100] air temp, ≤x AC turns off"         );
   variables.addCvar(                  &airTempHigh,       "TMP_ACU_ON",      " [0-100] air temp, ≥x AC turns on"          );
+  variables.addCvar(                  &waterAcidityHigh,  "ACD_PMP_DN",      " [0-14] ph level, ≤x Down doser pumps"      );
+  variables.addCvar(                  &waterAcidityLow,   "ACD_PMP_UP",      " [0-14] ph level, ≥x Up doser pumps"        );
+  variables.addCvar(                  &waterTempLow,      "TMP_HTR_ON",      " [0-100] water temp, ≥x heater turns on"    );
+  variables.addCvar(                  &waterTempHigh,     "TMP_HTR_OFF",      "[0-100] water temp, ≥x heater turns on"    );
   
   //-------------------------------------------------------------------------------------------------------------------------------------
   //configure latches                 Signal            Set(≤)              Reset(≥)              Qlow      Pin
