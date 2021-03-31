@@ -1,9 +1,9 @@
 # MAASyOS
-Modular Automated Aquaponics System Operating System
+### Modular Automated Aquaponics System Operating System
 
-Nicholas Jackson, EIT
+### Nicholas Jackson, EIT
 
-SFSU College of Engineering, Spring 2021
+#### SFSU College of Engineering, Spring 2021
 
 Senior Capstone Project in collaboration with
 - John Calhoun
