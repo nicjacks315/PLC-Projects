@@ -72,7 +72,7 @@ The following diagram still represents accurate wiring for the constructed syste
 ![1](https://user-images.githubusercontent.com/80596121/111043089-8d8d3580-83f5-11eb-9b2e-712eb2f71693.png)
 
 ### Backup Power Supply
-There isn't exactly a long range monitoring solution here, but in the event you're within BLE radio range, we can at least enter a low-power state and alert a nearby operator that the greenhouse lost power. Anything drawing current through the 5V relays will be shutoff, but at least the system won't undergo a full reboot (losing all runtime configurations).
+There isn't exactly a long range monitoring solution here, but in the event you're within BLE radio range, we can at least enter a low-power state and alert a nearby operator that the greenhouse lost power. Anything drawing current through the 5V relays will be shutoff, but at least the system won't undergo a full reboot (losing all runtime configurations). The voltage regulator could possibly be replaced with a voltage divider here with a small change to pin handling in the code.
 
 ![2](https://user-images.githubusercontent.com/80596121/111043093-90882600-83f5-11eb-9585-f6b5740079a1.jpg)
 
