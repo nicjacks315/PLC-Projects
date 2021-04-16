@@ -8,7 +8,7 @@
 Senior Design Capstone Project in collaboration with
 - John Calhoun, EIT
 - Daniel Navarro, EE
-- Ronal Effendy, CE
+- Ronal Effendy, CompE
 
 ![serial-ble-terminal](https://user-images.githubusercontent.com/80596121/111042939-992c2c80-83f4-11eb-8c24-d73a0afcbe69.jpg)
 
