@@ -6,7 +6,7 @@
 #### SFSU College of Engineering, Spring 2021
 
 Senior Design Capstone Project in collaboration with
-- John Calhoun, EIT
+- John Calhoun, EIT, ME
 - Daniel Navarro, EE
 - Ronal Effendy, CompE
 
