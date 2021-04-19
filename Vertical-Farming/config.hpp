@@ -9,19 +9,19 @@
 #define PIN_IN_FLO    2     //flowmeter pwm pin
 #define PIN_IN_WLS    3     //infrared water level data
 #define PIN_IN_DHT    4     //dht22 data (air temp/humidity)
-#define PIN_OUT_ACU   5    //AC unit relay
+#define PIN_IN_TDS    5     //dissolved solids analog
 
 #define PIN_IN_BLE    6     //bluetooth serial rx
 #define PIN_OUT_BLE   7     //bluetooth serial tx
 
 #define PIN_IN_ACD    8     //pH sensor
-#define PIN_IN_WTP    9     //water temperature
+#define PIN_IN_TMP    9     //water temperature
 
-#define PIN_IN_TDS    A0     //dissolved solids analog
+#define PIN_OUT_ACU   A0    //AC unit relay
 #define PIN_OUT_FAN   A1    //fan relay
-#define PIN_OUT_LIT   A2    //light relay
+#define PIN_OUT_LIT   A4    //light relay
 #define PIN_OUT_PMP   A3    //water pump relay
-#define PIN_OUT_WHT   A4    //water heater relay
+#define PIN_OUT_WHT   A2    //water heater relay
 #define PIN_OUT_VLV   A5    //solenoid valve
 
 #define PIN_OUT_PHU   12    //pH motor up
@@ -47,22 +47,19 @@ static float waterContact;
 static float ppm;
 static float acidity;
 static float flowRate;
+static float waterTemp;
 
 //-------------------------------------------------------------------------------------------------------------------------------------
 //additional control variables that can be modified by the user at runtime
 
 static float low = LOW;
 static float high = HIGH;
-static float humidityLow = 55.f;
-static float humidityHigh = 65.f;
-static float airTempLow = 24.f;
-static float airTempHigh = 27.f;
-static float airTempLow = 24.f;
-
-static float waterAcidityLow = 6.5f;
-static float waterAcidityHigh = 8.5f;
-static float waterTempLow = 21.f;
-static float waterTempHigh = 24.f;
+static float humidityLow  = 55.f;
+static float humidityHigh  = 65.f;
+static float airTempLow  = 24.f;
+static float airTempHigh  = 27.f;
+static float waterTempLow  = 18.f;
+static float waterTempHigh  = 21.f;
 
 //-------------------------------------------------------------------------------------------------------------------------------------
 
@@ -75,10 +72,6 @@ static void configure() {
   variables.addCvar(                  &humidityHigh,      "HUM_FAN_ON",      " [0-100] humidity, ≥x fan turns on"         );
   variables.addCvar(                  &airTempLow,        "TMP_ACU_OFF",      "[0-100] air temp, ≤x AC turns off"         );
   variables.addCvar(                  &airTempHigh,       "TMP_ACU_ON",      " [0-100] air temp, ≥x AC turns on"          );
-  variables.addCvar(                  &waterAcidityHigh,  "ACD_PMP_DN",      " [0-14] ph level, ≤x Down doser pumps"      );
-  variables.addCvar(                  &waterAcidityLow,   "ACD_PMP_UP",      " [0-14] ph level, ≥x Up doser pumps"        );
-  variables.addCvar(                  &waterTempLow,      "TMP_HTR_ON",      " [0-100] water temp, ≥x heater turns on"    );
-  variables.addCvar(                  &waterTempHigh,     "TMP_HTR_OFF",      "[0-100] water temp, ≥x heater turns on"    );
   
   //-------------------------------------------------------------------------------------------------------------------------------------
   //configure latches                 Signal            Set(≤)              Reset(≥)              Qlow      Pin
@@ -86,6 +79,7 @@ static void configure() {
   latches.add(new Latch(              &humidity,        &humidityLow,       &humidityHigh,        LOW,      PIN_OUT_FAN   ));   //fan turns OFF at <=humidityLow, turns ON at >=humidityHigh
   latches.add(new Latch(              &airTemp,         &airTempLow,        &airTempHigh,         LOW,      PIN_OUT_ACU   ));   //ac turns OFF at <=airTempLow, turns ON at >=airTempHigh
   latches.add(new Latch(              &waterContact,    &low,               &high,                HIGH,     PIN_OUT_PMP   ));   //pump turns ON at LOW, turns OFF at HIGH
+  latches.add(new Latch(              &waterTemp,       &waterTempLow,      &waterTempHigh,       HIGH,     PIN_OUT_WHT   ));   //water heater turns ON at <=waterTempLow, turns OFF at >=waterTempHigh
 
   //-------------------------------------------------------------------------------------------------------------------------------------
   //configure sensors                 Interval      Pin           Output
@@ -93,7 +87,8 @@ static void configure() {
   sensors.add(new SensorDht22(        1000UL,       PIN_IN_DHT,   &airTemp, &humidity   ));   //read airTemp and humidity every 1s
   sensors.add(new SensorWaterLevel(   500UL,        PIN_IN_WLS,   &waterContact         ));   //read water level every 0.5s
   sensors.add(new SensorFlow(         250UL,        PIN_IN_FLO,   &flowRate             ));   //read flowrate every 0.25s
-//sensors.add(new SensorTds(          10000UL,      PIN_IN_TDS,   &ppm                  ));   //read ppm every 10s
+  sensors.add(new SensorTds(          10000UL,      PIN_IN_TDS,   &ppm                  ));   //read ppm every 10s
+  sensors.add(new SensorWaterTemp(    10000UL,      PIN_IN_TMP,   &waterTemp            ));   //read water temp every 10s
 //sensors.add(new SensorPh(           10000UL,      PIN_IN_ACD,   &acidity              ));   //read pH level every 10s
 
   //-------------------------------------------------------------------------------------------------------------------------------------
