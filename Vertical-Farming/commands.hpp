@@ -2,15 +2,10 @@
 #define COMMANDS_HPP
 
 #include <MemoryFree.h>
-#define MEM_CAP 2048
+#define MEM_CAP 8192
 
-static void echo(int numArgs, String args[MAX_ARGS]) {
-  for( uint8_t i = 1; i < min(numArgs,MAX_ARGS); i++ ) {
-    serial.print(args[i]);
-  }
-}
 
-static void info(int numArgs, String args[MAX_ARGS]) {
+static void infoPrint() {
   serial.pageBreak();
 
   serial.writeBuffer(TERMINAL_WIDTH/2-4, "MAASyOS");
@@ -28,38 +23,51 @@ static void info(int numArgs, String args[MAX_ARGS]) {
 
   serial.pageBreak();
   
-  serial.writeBuffer( 6, "LIT: ON " );
+  serial.writeBuffer( 6, "LIT: " + String(digitalRead(PIN_OUT_LIT)==HIGH?"ON ":"OFF") );
   serial.writeBuffer( 26, "HUM: "+String(humidity)+" %" );
   serial.printBuffer();
   
-  serial.writeBuffer( 6, "APM: ON " );
+  serial.writeBuffer( 6, "ACU: " + String(digitalRead(PIN_OUT_ACU)==HIGH?"ON ":"OFF") );
   serial.writeBuffer( 26, "ATP: "+String(airTemp)+" ºC" );
   serial.printBuffer();
 
-  serial.writeBuffer( 6, "WPM: ON " );
+  serial.writeBuffer( 6, "PMP: " + String(digitalRead(PIN_OUT_PMP)==HIGH?"ON ":"OFF") );
   serial.writeBuffer( 26, "FLO: "+String(flowRate)+" Lpm" );
   serial.printBuffer();
 
-  serial.writeBuffer( 6, "ACU: OFF" );
-  serial.writeBuffer( 26, "WTP: "+String("00.00")+" ºC" );
+  serial.writeBuffer( 6, "FAN: " + String(digitalRead(PIN_OUT_FAN)==HIGH?"ON ":"OFF") );
+  serial.writeBuffer( 26, "WTP: "+String(waterTemp)+" ºC" );
   serial.printBuffer();
 
-  serial.writeBuffer( 6, "VLV: OFF" );
-  serial.writeBuffer( 26, "TDS: "+String("00.00")+" ppm" );
+  serial.writeBuffer( 6, "VLV: " + String(digitalRead(PIN_OUT_VLV)==HIGH?"ON ":"OFF") );
+  serial.writeBuffer( 26, "TDS: "+String(ppm)+" ppm" );
   serial.printBuffer();
 
-  serial.writeBuffer( 6, "PHU: OFF" );
+  serial.writeBuffer( 6, "PHU: " + String(digitalRead(PIN_OUT_PHU)==HIGH?"ON ":"OFF") );
   serial.writeBuffer( 26, "ACD: "+String("07.05")+" pH" );
   serial.printBuffer();
 
-  serial.writeBuffer( 6, "PHD: OFF" );
-  serial.writeBuffer( 26, "LVL: "+String(waterContact==0.f?"OK":"HIGH") );
+  serial.writeBuffer( 6, "PHD: " + String(digitalRead(PIN_OUT_PHD)==HIGH?"ON ":"OFF") );
+  serial.writeBuffer( 26, "LVL: " + String(waterContact==0.f?"OK":"HIGH") );
   serial.printBuffer();
   
-  serial.writeBuffer( 6, "FDR: OFF" );
+  serial.writeBuffer( 6, "WHT: " + String(digitalRead(PIN_OUT_WHT)==HIGH?"ON ":"OFF") );
   serial.printBuffer();
   
   serial.pageBreak();
+}
+
+
+
+
+static void echo(int numArgs, String args[MAX_ARGS]) {
+  for( uint8_t i = 1; i < min(numArgs,MAX_ARGS); i++ ) {
+    serial.print(args[i]);
+  }
+}
+
+static void info(int numArgs, String args[MAX_ARGS]) {
+  infoPrint();
 }
 
 static void set(int numArgs, String args[MAX_ARGS]) {
@@ -114,5 +122,6 @@ void CommandConsole::listCommands() {
     serial.print(m_commands[i].name);
   }
 }
+
 
 #endif
