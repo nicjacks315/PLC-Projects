@@ -19,10 +19,19 @@ void setup() {
   console.initialize();
   sensors.initialize();
   latches.initialize();
+  
+  pinMode( PIN_OUT_LIT, OUTPUT );
+  
 }
+
+unsigned long timer = 0UL;
 
 void loop() {
   dt = clock.tick();
+  
+  //temporary solution for light control
+  digitalWrite( PIN_OUT_LIT, clock.getHours() >= 8 && clock.getHours() <= 20 ? HIGH : LOW );
+  
   serial.update();
   sensors.update();
   latches.check();
