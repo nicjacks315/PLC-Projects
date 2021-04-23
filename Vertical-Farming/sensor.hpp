@@ -9,7 +9,7 @@ public :
   virtual void init() = 0;
   void update() {
     m_timer += dt;
-    if( m_timer >= m_period ) {
+    while( m_timer >= m_period ) {
       m_timer -= m_period;
       poll();
     }
